@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>DDL & DML</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Belajar Mengenai</span>
+    <span class="site-heading-lower">DDL & DML</span>
+  </h1>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+          </li>
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="ddldml.html">DDL & DML</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-upper">Tentang</span>
+                <span class="section-heading-lower">DDL dan DML</span>
+              </h2>
+              <p>Semua perintah SQL dibagi dalam 2 kategori besar sesuai fungsinya, yaitu :</br></br>
+			<b>DDL - Data Definition Language</b></br>
+			merupakan kumpulan perintah SQL yang digunakan untuk membuat, mengubah dan menghapus struktur dan definisi metadata dari 
+			objek-objek database.</br></br>
+
+			<b>DML - Data Manipulation Language</b></br>
+			merupakan kumpulan perintah SQL yang digunakan untuk proses pengolahan isi data di dalam table seperti memasukkan, merubah 
+			dan menghapus isi data - dan tidak terkait dengan perubahan struktur dan definisi tipe data dari objek database.</br></br>
+
+			Mari kita lihat dari definisi dan contoh lebih lanjut pada bagian berikut di bawah ini.</br></br>
+			<b>DDL - Data Definition Language</b></br>
+			Seperti definisi yang telah dijelaskan di atas, DDL adalah kumpulan perintah SQL yang digunakan untuk membuat (create), 
+			mengubah (alter) dan menghapus (drop) struktur dan definisi tipe data dari objek-objek database.</br></br>
+
+			Objek-objek database pada yang dimaksud - pada MySQL - adalah sebagai berikut :</br>
+			-> Database</br>
+			-> Table</br>
+			-> View</br>
+			-> Index</br>
+			-> Procedure (Stored Procedure)</br>
+			-> Function</br>
+			-> Trigger</br></br>
+			Contoh :</br></br>
+
+			Perintah berikut akan membuat table pada database kita dengan nama "mahasiswa"</br>
+			CREATE TABLE ms_karyawan (</br>
+				Universitas varchar(45) default NULL,</br>
+				NIM varchar(10) NOT NULL,</br>
+				nama_depan varchar(8) default NULL,</br>
+				nama_belakang varchar(9) default NULL,</br>
+				jenis_kelamin varchar(1) default NULL,</br>
+				PRIMARY KEY  (NIM) )</br></br>
+				
+			Daftar Perintah DDL pada MySQL 5.0</br>
+			Berikut adalah contoh perintah DDL yang digunakan pada MySQL. </br>
+			Pembuatan (CREATE)</br></br>
+				- CREATE DATABASE</br>
+				- CREATE FUNCTION</br>
+				- CREATE INDEX</br>
+				- CREATE PROCEDURE</br>
+				- CREATE TABLE</br>
+				- CREATE TRIGGER</br>
+				- CREATE VIEW</br></br>
+
+			Perubahan (ALTER & RENAME)</br>
+			Perintah ini digunakan untuk mengubah struktur tabel yang telah dibuat. Pekerjaannya mencakup mengganti nama tabel,
+			menambah kolom, mengubah kolom, menghapus kolom, maupun memberikan atribut pada kolom.</br></br>
+				- ALTER DATABASE</br>
+				- ALTER FUNCTION</br>
+				- ALTER PROCEDURE</br>
+				- ALTER TABLE</br>
+				- ALTER VIEW</br>
+				- RENAME TABLE</br></br>
+
+			Penghapusan (DROP)</br>
+			Perintah ini digunakan untuk menghapus database dan tabel.</br></br>
+				- DROP DATABASE</br>
+				- DROP FUNCTION</br>
+				- DROP INDEX</br>
+				- DROP PROCEDURE</br>
+				- DROP TABLE</br>
+				- DROP TRIGGER</br>
+				- DROP VIEW</br></br>
+				
+			<b>DML - Data Manipulation Language</b></br>
+				DML sendiri adalah kumpulan perintah SQL yang berhubungan dengan pekerjaan mengolah data di dalam table - dan tidak 
+				terkait dengan perubahan struktur dan definisi tipe data dari objek database seperti table, column, dan sebagainya.</br></br>
+
+				Contoh DML : Mengambil Seluruh Row Data dari table mahasiswa</br>
+
+				SELECT * FROM mahasiswa</br></br>
+
+
+				Contoh DML : Memasukkan data ke dalam tabel mahasiswa</br>
+
+				INSERT INTO mahasiswa(</br>
+					Universitas,</br>
+					NIM,</br>
+					nama_depan,</br>
+					nama_belakang,</br>
+					jenis_kelamin) </br>
+				VALUES ('UMS', 'L200170003', 'Fajar', 'Nur Hidayat', 'Laki-laki');</br></br>
+				Beberapa daftar Perintah DML MySQL 5.0</br>
+				-> CALL</br>
+				Untuk memanggil prosedur tersimpan</br>
+				-> DELETE</br>
+				Untuk menghapus data/tabel</br>
+				-> DO</br>
+				-> HANDLER</br>
+				Untuk mengatur aliran eksekusi ketika suatu kondisi yang berhubungan dengan error terjadi. 
+				Sebagai gambaran, sekiranya terdapat kunci yang kembar ketika terjadi penyisipan data, 
+				aliran eksekusi dapat diatur agar segera dihentikan atau dilanjutkan ke pernyataan berikutnya</br>
+				-> INSERT</br>
+				Digunakan untuk menyisipkan data yang terdapat pada variable</br>
+				-> LOAD DATA INFILE</br>
+				Digunakan untuk menginput data kedalam tabel dimana data yang diinput berasal dari sebuah file</br>
+				-> REPLACE</br>
+				Selain bisa menambahkan data baru seperti perintah INSERT juga bisa menambah data yang sudah ada</br>
+				-> SELECT</br>
+				Untuk menampilkan data yang ada pada table</br>
+				-> TRUNCATE</br>
+				untuk mengosongkan atau menghapus semua data yang ada di table</br>
+				-> UPDATE</br>
+				Untuk memperbarui data
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0 small">Copyright &copy; Your Website 2019</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
